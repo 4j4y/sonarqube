@@ -2424,6 +2424,24 @@ public final class CoreMetrics {
     .create();
 
   /**
+   * @since 7.0
+   */
+  public static final String NEW_DEVELOPMENT_COST_KEY = "new_development_cost";
+
+  /**
+   * @since 7.0
+   */
+  public static final Metric<String> NEW_DEVELOPMENT_COST = new Metric.Builder(NEW_DEVELOPMENT_COST_KEY, "SQALE Development Cost on New Code", Metric.ValueType.STRING)
+    .setDescription("SQALE development cost on new code")
+    .setDomain(DOMAIN_MAINTAINABILITY)
+    .setDirection(Metric.DIRECTION_WORST)
+    .setOptimizedBestValue(true)
+    .setBestValue(0.0)
+    .setQualitative(true)
+    .setHidden(true)
+    .create();
+
+  /**
    * @since 4.5
    */
   // TODO should be renamed to TECHNICALDEBT_RATIO_KEY = "technicaldebt_ratio"
